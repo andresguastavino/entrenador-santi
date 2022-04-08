@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
-import objetivos from '../../../assets/data/objetivos';
+import objectives from '../../../assets/data/objectives';
 import Dumbell from '../../Utils/Dumbell';
 import Chevron from '../../Utils/Chevron';
 
-export default function ObjetivosAvanzado() {
+export default function Objectives() {
 
     return (
         <>
@@ -21,8 +21,8 @@ export default function ObjetivosAvanzado() {
 
                 <main className="body">
                     {
-                        objetivos.map((objetivo, i) => (
-                            <Objetivo data={objetivo} key={i} />
+                        objectives.map((objective, i) => (
+                            <Objective data={objective} key={i} />
                         ))
                     }
                 </main>
@@ -56,7 +56,7 @@ export default function ObjetivosAvanzado() {
     );
 }
 
-function Objetivo({ data }) {
+function Objective({ data }) {
 
     const [showing, setShowing] = useState(false);
     const [transitioning, setTransitioning] = useState(false);

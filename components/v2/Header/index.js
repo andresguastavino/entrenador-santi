@@ -1,43 +1,37 @@
 import { useState, useEffect, useContext } from 'react';
 import { WindowPropsContext } from '../../../lib/contexts';
+import links from '../../../assets/data/links.json';
 import Link from 'next/link';
-
-const links = [
-    {
-        href: '/',
-        label: 'Home'
-    },
-    {
-        href: '/asesorias_personalizadas/v1',
-        label: 'Asesorias Personalizadas'
-    },
-    {
-        href: '/preguntas_frecuentes',
-        label: 'Preguntas frecuentes'
-    }
-]
 
 export default function Header() {
 
-    const [scrolled, setScrolled] = useState(false);
+    const [borderWidth, setBorderWidth] = useState(0);
     
     const windowProps = useContext(WindowPropsContext);
 
     useEffect(() => {
-        const scrollY = windowProps?.scrollY;
-        
-        if(!scrollY) {
-            setScrolled(false);
+        const min = 10,
+            max = windowProps?.height / 3 || 300,
+            scrollY = windowProps?.scrollY;
+
+        if(!scrollY) { 
+            setBorderWidth(0);
             return;
         }
 
-        setScrolled(scrollY > 0);
+        if(scrollY < min) setBorderWidth(0);
+        else if(scrollY >= max) setBorderWidth(100);  
+        else setBorderWidth(scrollY * 100 / max);
     }, [windowProps]);
+
+    const handleClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     return (
         <>
-            <header className={`header ${ scrolled ? 'scrolled' : '' }`}>
-                <div className="text">
+            <header className={`header ${ borderWidth > 0 ? 'scrolled' : '' }`}>
+                <div className="text" onClick={ handleClick }>
                     <p>
                         ENTRENADOR: SANTIAGO LONDRA
                     </p>
@@ -61,7 +55,7 @@ export default function Header() {
                     } */}
                 </div>
 
-                <div className="line-black" />
+                {/* <div className="line-black" /> */}
             </header>
 
             <style jsx>{`
@@ -72,26 +66,29 @@ export default function Header() {
                     top: 0;
                     left: 0;
                     z-index: 100;
+                    transition-duration: .5s;
+                }
+
+                .header.scrolled {
+                    box-shadow: 0px 5px 20px 2px rgba(0,0,0,0.7);
+                    -webkit-box-shadow: 0px 5px 20px 2px rgba(0,0,0,0.7);
+                    -moz-box-shadow: 0px 5px 20px 2px rgba(0,0,0,0.7);
+                    transition-duration: .5s;
                 }
 
                 .header > .text {
                     width: max-content;
-                    color: #6b6363;
+                    color: #fff;
+                    text-shadow: 0 0 2px #fff;
                     font-weight: 600;
                     padding: 2%;
+                    cursor: pointer;
                 }
 
                 .line-black {
-                    width: 100vw;
-                    opacity: 0;
+                    width: ${ borderWidth }%;
                     height: 2px;
                     background-color: #000;
-                    transition-duration: .5s;
-                }
-
-                .scrolled .line-black {
-                    opacity: 1;
-                    transition-duration: .5s;
                 }
             `}</style>
         </>
