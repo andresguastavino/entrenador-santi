@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
-import objetivos from '../../assets/data/objetivos';
-import Dumbell from '../Utils/Dumbell';
-import Chevron from '../Utils/Chevron';
+import objetivos from '../../../assets/data/objetivos';
+import Dumbell from '../../Utils/Dumbell';
+import Chevron from '../../Utils/Chevron';
 
-export default function Objectives() {
+export default function ObjetivosAvanzado() {
 
     return (
         <>
@@ -74,38 +74,38 @@ function Objetivo({ data }) {
         <>
             <article className="objective">
                 <header className={`header ${ showing ? 'showing' : '' }`} onClick={handleClick} >
-                    <div className="text">
+                    <div className="text" unselectable="on">
                         { data.title }
                     </div>
-                    <div className="chevron">
+                    <div className="chevron" unselectable="on">
                         <Chevron width={ '30%' } rotation={ showing ? -90 : 90 } transitionDuration={ '.5s' }/>
                     </div>
                 </header>
 
                 <main className={`body ${ showing ? 'showing' : '' }`} onTransitionEnd={handleTransitionEnd} >
-                {
-                    data.body.map((cnt, i) => (
-                        cnt.type === 'p' ? 
-                            (
-                                <p key= { i }>
-                                    { cnt.content }
-                                </p>
-                            )
-                        : cnt.type === 'l' ?
-                            (
-                                <ul key= { i }>
-                                    { 
-                                        cnt.content.map((item, j) => (
-                                            <li key={ j }>
-                                                { item }
-                                            </li>
-                                        ))
-                                    }
-                                </ul>
-                            )
-                        : null
-                    ))
-                }
+                    {
+                        data.body.map((cnt, i) => (
+                            cnt.type === 'p' ? 
+                                (
+                                    <p key= { i }>
+                                        { cnt.content }
+                                    </p>
+                                )
+                            : cnt.type === 'l' ?
+                                (
+                                    <ul key= { i }>
+                                        { 
+                                            cnt.content.map((item, j) => (
+                                                <li key={ j }>
+                                                    { item }
+                                                </li>
+                                            ))
+                                        }
+                                    </ul>
+                                )
+                            : null
+                        ))
+                    }
                 </main>
             </article>
 
@@ -146,10 +146,23 @@ function Objetivo({ data }) {
 
                 .header > .text {
                     width: 80%;
+                    text-align: left;
+                    -webkit-user-select: none; /* Safari */        
+                    -moz-user-select: none; /* Firefox */
+                    -ms-user-select: none; /* IE10+/Edge */
+                    user-select: none; /* Standard */
                 }
 
                 .header > .chevron {
                     width: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+                    -webkit-user-select: none; /* Safari */        
+                    -moz-user-select: none; /* Firefox */
+                    -ms-user-select: none; /* IE10+/Edge */
+                    user-select: none; /* Standard */
                 }
 
                 .body {
@@ -162,7 +175,7 @@ function Objetivo({ data }) {
                     opacity: 0;
                     transform: translateY(-100%);
                     transition-property: opacity, transform;
-                    transition-duration: .4s, 1s;
+                    transition-duration: .2s, .8s;
                 }
             
                 .body.showing {
@@ -170,7 +183,7 @@ function Objetivo({ data }) {
                     opacity: 1;
                     transform: translateY(0px);
                     transition-property: opacity, transform;
-                    transition-duration: 2s, 1s;
+                    transition-duration: 1.5s, .2s;
                 }
 
                 .body > p {
@@ -192,7 +205,7 @@ function Objetivo({ data }) {
 
                     .header {
                         font-size: 2rem;
-                        padding: 2%;
+                        padding: 2% 5%;
                     }
 
                     .body {

@@ -1,16 +1,10 @@
-import Dumbell from "../Utils/Dumbell";
+import Dumbell from "../../Utils/Dumbell";
 
 export default function PresentationCard() {
 
     return (
         <>
             <section className="presentation-card">
-                <header className="header">
-                    <p>
-                        ENTRENADOR: SANTIAGO LONDRA
-                    </p>
-                </header>
-
                 <main className="body">
                     <div className="logo">
                         <Dumbell />
@@ -45,12 +39,6 @@ export default function PresentationCard() {
                     flex-wrap: wrap;
                     justify-content: center;
                     padding: 5%;
-                }
-
-                .header {
-                    width: 100%;
-                    color: #6b6363;
-                    font-weight: 500;
                 }
 
                 .body {

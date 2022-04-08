@@ -1,4 +1,4 @@
-export default function ManeraTrabajar() {
+export default function WorkingWays() {
 
     return (
         <>

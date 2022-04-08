@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { WindowSizeContext } from '../../lib/contexts';
+import { WindowPropsContext } from '../../lib/contexts';
 import Header from "../../components/Header";
 import PresentationCard from '../../components/PresentationCard';
 import ObjetivosAvanzado from '../../components/Objetivos/ObjetivosAvanzado';
@@ -10,8 +10,8 @@ import ManeraTrabajar from '../../components/ManeraTrabajar';
 
 export default function AsesoriasPersonalizadas() {
 
-    const windowSize = useContext(WindowSizeContext);
-    const windowWidth = windowSize?.width;
+    const windowProps = useContext(WindowPropsContext);
+    const windowWidth = windowProps?.width;
     const buttonWidth = windowWidth < 768 ? '80%' : '30%';
     const buttonHeight = windowWidth < 768 ? '15%' : '20%';
 
