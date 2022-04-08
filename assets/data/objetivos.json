@@ -1,0 +1,67 @@
+[
+    {
+        "title": "RENDIMIENTO",
+        "body": [
+            {
+                "type": "p",
+                "content": "En este sector el objetivo es mejorar las cualidades físicas para poder desarrollarse en la actividad que uno hace frecuentemente."
+            },
+            {
+                "type": "p",
+                "content": "En este sentido el programa de entrenamiento es complementario con la actividad principal y no supletorio de la misma."
+            },
+            {
+                "type": "p",
+                "content": "Según cual sea el deporte que uno haga, el programa va a estar dirigido a mejorar una cualidad u otra; por este motivo los objetivos dentro del sector de rendimiento pueden ser:"
+            }, 
+            {
+                "type": "l",
+                "content": [
+                    "FUERZA",
+                    "POTENCIA",
+                    "VELOCIDAD",
+                    "RESISTENCIA",
+                    "AGILIDAD"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "ESTÉTICA",
+        "body": [
+            {
+                "type": "p",
+                "content": "En este sector el objetivo es cambiar el aspecto físico de la persona, sea cual sea su anhelo. Por lo gral, hablamos de mejorar la composición corporal habiendo un aumento de masa muscular y una pérdida de masa adiposa."
+            },
+            {
+                "type": "p",
+                "content": "Según el punto de partida de la persona se define el programa y los resultados que se pueden obtener."
+            },
+            {
+                "type": "p",
+                "content": "Con el la experiencia de entrenamiento hay que comenzar a plantear diferentes objetivos como son:"
+            },
+            {
+                "type": "l",
+                "content": [
+                    "Ganancia masa muscular",
+                    "Pérdida de tejido adiposo",
+                    "Mantener lo logrado"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "SALUD",
+        "body": [
+            {
+                "type": "p",
+                "content": "En este sector el objetivo es prevenir la enfermedad mediante el ejercicio físico y los buenos hábitos alimenticios."
+            },
+            {
+                "type": "p",
+                "content": "La gran diferencia con el resto de sectores es la exigencia, en este sector hablamos de mejorar la calidad de vida sin provocar un gran cambio mas que el de inculcar un hábito de ejercicios físicos generales para todo el cuerpo."
+            }
+        ]
+    }
+]

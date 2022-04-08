@@ -1,7 +1,14 @@
+import { useWindowSize } from '../lib/hooks';
+import { WindowSizeContext } from '../lib/contexts';
 import '../styles/globals.css'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+export default function MyApp({ Component, pageProps }) {
+    
+    const windowSize = useWindowSize();
 
-export default MyApp
+    return (
+        <WindowSizeContext.Provider value={ windowSize } >
+            <Component {...pageProps} />
+        </WindowSizeContext.Provider>
+    );
+}

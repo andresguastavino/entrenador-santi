@@ -8,9 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
-    "deploy": "firebase deploy",
-    "deploy_prod": "cross-env NODE_ENV=production firebase deploy --only functions,hosting"
+    "export": "next export"
   },
   "dependencies": {
     "firebase-admin": "^10.0.2",
