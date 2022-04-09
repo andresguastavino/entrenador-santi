@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Servicio simple",
+        "features": [
+            "3 Consejos por semana",
+            "Respuesta a consultas",
+            "Precio: $500"
+        ]
+    },
+    {
+        "name": "Servicio exclusivo",
+        "features": [
+            "Plan de entrenamiento",
+            "Disponibilidad 24 hs",
+            "Seguimiento semanal",
+            "Precio: $1500"
+        ]
+    }
+]

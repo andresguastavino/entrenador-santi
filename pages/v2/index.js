@@ -3,7 +3,9 @@ import { WindowPropsContext } from '../../lib/contexts';
 import Header from "../../components/v2/Header";
 import PresentationCard from '../../components/v2/PresentationCard';
 import Objectives from '../../components/v2/Objectives/Objectives';
-// import ManeraTrabajar from '../../components/ManeraTrabajar';
+import GetAdvisory from '../../components/v2/GetAdvisory';
+import WorkingWays from '../../components/v2/WorkingWays';
+import AvailableServices from '../../components/v2/AvailableServices';
 
 export default function AsesoriasPersonalizadas() {
 
@@ -14,7 +16,9 @@ export default function AsesoriasPersonalizadas() {
             <Header />
             <PresentationCard />
             <Objectives />
-            {/* <ManeraTrabajar /> */}
+            <GetAdvisory />
+            <WorkingWays />
+            <AvailableServices />
         </>
     );
 }

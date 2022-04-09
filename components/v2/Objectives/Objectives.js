@@ -32,9 +32,19 @@ export default function Objectives() {
                 .objectives {
                     width: 100vw;
                     height: 100%;
+                    padding-top: 2%;
+                    padding-bottom: 5%;
                     background-color: #1B1B1B;
                     display: flex;
                     flex-wrap: wrap;
+                }
+
+                .header {
+                    width: 100%;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    text-align: center;
+                    color: #fff;
                 }
 
                 .body {
@@ -46,6 +56,14 @@ export default function Objectives() {
                 }
 
                 @media (min-width: 768px) {
+                    .objectives {
+                        padding-bottom: 0%;
+                    }
+                    
+                    .header {
+                        font-size: 4rem;
+                    }
+
                     .body {
                         justify-content: space-around;
                         padding: 0% 2%;
