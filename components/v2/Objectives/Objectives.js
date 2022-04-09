@@ -132,8 +132,6 @@ function Objective({ data }) {
                     font-weight: bold;
                     background-color: #1B1B1B;
                     border: 1px solid #6b6363;
-                    border-radius-bottom: 0;
-                    border-radius: .5rem;
                     transition-duration: 1s;
                     z-index: 100;
                 }
@@ -141,7 +139,6 @@ function Objective({ data }) {
                 .header.showing {
                     background-color: #000;
                     border-color: #000;
-                    border-radius: .5rem .5rem 0rem 0rem;
                 }
 
                 .header > .text {
@@ -171,7 +168,6 @@ function Objective({ data }) {
                     background-color: #4e4e4e;
                     color: #fff;
                     padding: 3%;
-                    border-radius: 0rem 0rem .5rem .5rem;
                     opacity: 0;
                     transform: translateY(-100%);
                     transition-property: opacity, transform;

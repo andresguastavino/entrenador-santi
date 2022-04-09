@@ -84,7 +84,7 @@ export default function PresentationCard() {
                     width: 50%;
                     margin-top: 3%;
                     height: 2px;
-                    background-color: #6b6363;
+                    background-color: #fff;
                 }
 
                 @media (min-width: 768px) {
