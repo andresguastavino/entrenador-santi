@@ -16,11 +16,11 @@ export default function GetAdvisory() {
                 </header>
 
                 <main className="body">
-                    <Button href="/" label="Online" 
+                    <Button href="/v2/online" label="Online" 
                         width={ windowProps?.width < 768 ? '60%' : '40%' } 
                         margin={ windowProps?.width < 768 ? '1% 0%' : '' } 
                     />
-                    <Button href="/" label="Presencial" 
+                    <Button href="/v2/presencial" label="Presencial" 
                         width={ windowProps?.width < 768 ? '60%' : '40%' } 
                         margin={ windowProps?.width < 768 ? '1% 0%' : '' } 
                     />
